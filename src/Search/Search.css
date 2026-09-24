@@ -1,0 +1,52 @@
+.SearchBar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 50%;
+  height: 40px;
+  padding-right: 50px;
+  /*20px para compensar la mitad del logo y balancear con la derecha
+  y 23.5 de la mitad del boton con margin y asi balancear todo, 
+  para un total de 43.5px*/
+}
+
+.SearchBar input {
+  width: 80%;
+  padding: 12.5px 0;
+  border: 1px solid #fff;
+  border-radius: 50px;
+  color: black;
+  text-align: center;
+  font-size: 15px;
+}
+
+.SearchBar input:focus {
+  outline: none;
+}
+
+.SearchBar button {
+  margin-left: 5px;
+  cursor: pointer;
+  width: 40px;
+  border: 0px;
+  border-radius: 50%;
+  height: 42.5px;
+  background: #ffffff;
+}
+
+.SearchBar button:hover {
+  background: hsl(200, 25%, 33%);
+}
+
+.SearchBar button:active {
+  background: hsl(200, 25%, 25%);;
+}
+
+.symbol {
+  width: 15px;
+  height: 15px;
+  margin: 0px;
+  padding: 0px;
+}

@@ -1,0 +1,460 @@
+/* Status messages
+.status {
+    color: #e6e6e6;
+    width: 50%;
+    margin: 0 auto;
+    padding: 50px;
+    text-align: center;
+}
+
+.status.error {
+    color: red;
+}
+
+.status.not-found {
+    color: yellow;
+}
+
+/*The whole thing*/
+.post-container {
+    background-color: black;
+    margin: 0px auto 0px auto;
+    padding: 15px 10px 15px 10px;
+    border-radius: 5px;
+}
+
+/*Community link*/
+.community-link {
+    color: teal;
+}
+
+.community-link:hover {
+    color: cyan;
+    font-weight: 700;
+}
+
+/*Title*/
+.post-title {
+    color: hsl(0, 0%, 90%);
+    margin: 0px;
+    padding: 10px 0px 5px 0px;
+}
+
+/*Metadata*/
+.post-meta {
+    color: hsl(0, 0%, 60%);
+    font-size: 14px;
+}
+
+.post-author {
+    margin: 0px 5px 0px 0px;
+}
+
+.post-date {
+    margin: 0px 0px 0px 5px;
+}
+
+.edited {
+    font-style: italic;
+    color: hsl(0, 0%, 90%);
+}
+
+.nsfw-tag {
+    max-height: 30px;
+}
+
+/*Post text*/
+.post p {
+    color: hsl(0, 0%, 90%);
+    padding: 0px;
+    margin: 0px;
+}
+
+/* NEW: Post body text (Including in-text links)*/
+.post-body {
+    color: hsl(0, 0%, 90%);
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 15px 0;
+    padding: 7.5px;
+    background: hsl(0, 0%, 15%);
+    border-radius: 5px;
+    white-space: pre-wrap;
+}
+
+.post-body a {
+    color: hsl(180, 100%, 25%);
+    text-decoration: underline;
+}
+
+.post-body a:hover {
+    color: cyan;
+    font-weight: 500;
+}
+
+/* Media */
+.post-media {
+    display: block;
+    margin: 10px auto 10px auto;
+    max-height: 750px;
+    max-width: 750px;
+}
+
+/*If the link isn't in text*/
+.post-link {
+    color: hsl(180, 100%, 25%);
+    text-decoration: underline;
+}
+
+.post-link:hover {
+    color: cyan;
+    font-weight: 500;
+}
+
+/* Voting counters - keeping your design */
+.post-voting {
+    display: flex;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+.score {
+    color: hsl(0, 0%, 90%);
+    font-weight: 700;
+    font-size: 30px;
+    text-align: center;
+}
+
+.vote-btn {
+    background: none;
+    border: none;
+    font-size: 50px;
+    color: hsl(0, 0%, 60%);
+    cursor: pointer;
+    padding: 0px;
+    transition: all 0.2s;
+}
+
+.vote-btn:hover {
+    color: hsl(0, 0%, 90%);
+    transform: scale(1.25);
+}
+
+.vote-btn:active {
+    transform: scale(1.5);
+}
+
+.vote-btn.DWN {
+    margin-left: -20px;
+    /*ONLY way I could fix a mysterious spacing*/
+}
+
+/*For showcase*/
+.vote-btn.UP:active {
+    color: green;
+}
+
+/*For full function*/
+/* .vote-btn.voted-up {
+    color: green;
+} */
+
+/*For showcase*/
+.vote-btn.DWN:active {
+    color: red;
+}
+
+/*For full function*/
+/* .vote-btn.DWN.voted-down {
+    color: red;
+} */
+
+/* Comments section */
+.comments-section {
+    margin-top: 15px;
+}
+
+.comments-section h3 {
+    color: #e6e6e6;
+    border-bottom: 1px solid hsl(0, 0%, 50%);
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+/* NEW: Comment form */
+.new-comment-form {
+    margin: 10px 0;
+}
+
+.new-comment-form textarea {
+    width: 100%;
+    padding: 10px;
+    background: hsl(0, 0%, 15%);
+    color: hsl(0, 0%, 90%);
+    border: 3px solid hsl(0, 0%, 25%);
+    border-radius: 5px;
+    font-size: 14px;
+    resize: vertical;
+    font-family: inherit;
+}
+
+.new-comment-form textarea:focus {
+    /*For when we're writing on it*/
+    outline: none;
+    border-color: cyan;
+}
+
+.new-comment-form button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: hsl(180, 100%, 25%);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s;
+    /*Transition element setter for pseudo classes*/
+}
+
+.new-comment-form button:hover {
+    color: black;
+    background: hsl(180, 100%, 50%);
+}
+
+.new-comment-form button:active {
+    transform: scale(1.1);
+}
+
+.new-comment-form button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* NEW: Individual comment styling */
+.no-comments {
+    color: #888;
+    text-align: center;
+    padding: 20px;
+}
+
+.comment {
+    display: block;
+    height: fit-content;
+    padding: 5px 0px 10px 10px;
+    margin-bottom: 20px;
+    background: black;
+    border-radius: 5px;
+    border-left: 1px solid hsl(0, 0%, 50%);
+}
+
+/* Comment depth indentation */
+.comment.depth-0 {
+    border-left-color: teal;
+}
+
+.comment.depth-1 {
+    border-left-color: teal;
+    margin-left: 20px;
+}
+
+.comment.depth-2 {
+    border-left-color: teal;
+    margin-left: 40px;
+}
+
+.comment.depth-3 {
+    border-left-color: teal;
+    margin-left: 60px;
+}
+
+.comment.depth-4 {
+    border-left-color: teal;
+    margin-left: 80px;
+}
+
+.comment.depth-5 {
+    border-left-color: teal;
+    margin-left: 100px;
+}
+
+/* Comment header */
+.comment-header {
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.comment-header strong {
+    color: teal;
+}
+
+.comment-edited {
+    font-style: italic;
+    color: #555;
+}
+
+/* Comment body */
+.comment-body {
+    color: hsl(0, 0%, 90%);
+    font-size: 16px;
+    line-height: 1.2;
+    margin: 0px;
+}
+
+.comment-body a {
+    color: teal;
+    text-decoration: underline;
+}
+
+.comment-body a:hover {
+    color: cyan;
+    font-weight: 500;
+}
+
+/* Comment actions */
+.comment-actions {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+}
+
+.comment-actions .vote-btn {
+    font-size: 30px;
+}
+
+.comment-actions .vote-btn:hover {
+    color: hsl(0, 0%, 90%);
+    transform: scale(1.25);
+}
+
+.comment-actions .vote-btn:active {
+    color: hsl(0, 0%, 90%);
+    transform: scale(1.5);
+}
+
+.comment-actions .score {
+    font-size: 18px;
+}
+
+.comment-actions .vote-btn.UP:active {
+    color: green;
+}
+
+/*For full function*/
+/* .comment-actions .vote-btn.UP .voted-up {
+    color: green;
+} */
+
+.comment-actions .vote-btn.DWN {
+    margin-left: -20px;
+}
+
+.comment-actions .vote-btn.DWN:active {
+    color: red;
+}
+
+/*For full function*/
+/* .comment-actions .vote-btn.DWN .voted-up {
+    color: red;
+} */
+
+.reply-btn {
+    background: none;
+    border: none;
+    color: hsl(0, 0%, 50%);
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 12px;
+    transition: all 0.2s;
+}
+
+.reply-btn:hover {
+    color: hsl(0, 0%, 90%);
+    transform: scale(1.1);
+}
+
+.reply-btn:active {
+    color: cyan;
+    transform: scale(1.2);
+}
+
+/* Reply form */
+.reply-form {
+    margin: 5px 0px 5px 20px;
+}
+
+.reply-form textarea {
+    width: 100%;
+    padding: 10px;
+    background: hsl(0, 0%, 15%);
+    color: hsl(0, 0%, 90%);
+    border: 3px solid hsl(0, 0%, 25%);
+    border-radius: 5px;
+    font-size: 14px;
+    resize: vertical;
+    font-family: inherit;
+}
+
+.reply-form textarea:focus {
+    outline: none;
+    border-color: cyan;
+}
+
+.reply-actions {
+    margin-top: 5px;
+    display: flex;
+    gap: 10px;
+}
+
+.reply-actions button {
+    padding: 5px 15px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.2s;
+}
+
+.reply-actions button:hover {
+    transform: scale(1.1);
+}
+
+.reply-actions button[type="submit"] {
+    background: teal;
+    color: white;
+}
+
+.reply-actions button[type="submit"]:active {
+    color: black;
+    background: cyan;
+}
+
+.reply-actions button[type="button"] {
+    background: hsl(0, 0%, 25%);
+    color: hsl(0, 0%, 90%);
+}
+
+.reply-actions button[type="button"]:active {
+    background: hsl(0, 0%, 15%);
+    color: hsl(0, 0%, 70%);
+}
+
+/* Responsive */
+@media only screen and (max-width: 1000px) {
+
+    .post-media {
+        max-height: 750px;
+        max-width: 750px;
+    }
+
+}
+
+@media only screen and (max-width: 800px) {
+
+    .post-media {
+        max-width: 400px;
+    }
+
+}

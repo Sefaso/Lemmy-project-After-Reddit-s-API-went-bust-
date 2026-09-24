@@ -1,0 +1,119 @@
+.status {
+    width: 50%;
+    margin: 0 auto;
+    padding: 50px;
+    align-items: center;
+}
+
+.results {
+    width: 50%;
+    background-color: hsl(0, 0%, 10%);
+    margin: 0px auto 0px auto;
+    padding: 20px 10px 0px 10px;
+}
+
+.results .container {
+    width: 100%;
+    background-color: hsl(0, 0%, 10%);
+    margin: 0 auto;
+    padding: 20px 0px 20px 0px;
+    border-bottom: 1px solid hsl(0, 0%, 90%);
+}
+
+.results a {
+    color: hsl(0, 0%, 90%);
+    text-decoration: none;
+}
+
+.results h2 {
+    color: hsl(0, 0%, 90%);
+    margin: 0px;
+}
+
+.results a:hover {
+    color: #a82e00;
+    font-weight: 700;
+}
+
+.results a:active {
+    color: #541700;
+    font-weight: 700;
+}
+
+.results p {
+    color: hsl(0, 0%, 90%);
+    margin: 0px;
+}
+
+.results .media {
+    display: block;
+    margin: 20px auto 0px auto;
+    min-width: 40%;
+    max-width: 100%;
+    min-height: 40%;
+    max-height: 700px;
+}
+
+.results .disclaimer {
+    padding-top: 10px;
+    text-align: center;
+}
+
+.results .buttons {
+    display: flex;
+    align-items: baseline;
+    margin: 0px;
+    padding: 0px;
+}
+
+.results .buttons h3 {
+    color: hsl(0, 0%, 90%);
+    margin-bottom: 0px;
+    margin-right: 20px;
+    padding: 0px;
+}
+
+.results .upvote {
+    margin-top: 20px;
+    margin-right: 10px;
+    height: 35px;
+}
+
+.results .comment {
+    margin-top: 20px;
+    margin-right: 10px;
+    height: 25px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .results h2 {
+        font-size: 125%;
+    }
+
+    .results .media {
+        min-height: 250px;
+        max-height: 500px;
+    }
+
+    .results p {
+        font-size: 75%;
+    }
+
+    .results .upvote {
+        height: 25px;
+    }
+
+    .results .comment {
+        height: 20px;
+    }
+
+    .buttons h3 {
+        font-size: 100%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .results {
+        width: 80%;
+    }
+}

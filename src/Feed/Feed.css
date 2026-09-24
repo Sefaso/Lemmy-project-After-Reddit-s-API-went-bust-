@@ -1,0 +1,456 @@
+.status {
+  color: #e6e6e6;
+  width: 50%;
+  margin: 0 auto;
+  padding: 50px;
+  text-align: center;
+}
+
+.status.error {
+  color: red;
+}
+
+.status.not-found {
+  color: yellow;
+}
+
+/* Community header */
+.community-header {
+  background: hsl(0, 0%, 15%);
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border-left: 3px solid teal;
+}
+
+.community-header h2 {
+  color: teal;
+  margin: 0;
+  font-size: 24px;
+}
+
+.community-header p {
+  color: hsl(0, 0%, 90%);
+  margin: 10px 10px 0 0;
+  font-size: 20px;
+}
+
+/* Feed controls */
+.feed-controls {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background: #1a1a1a;
+  border-radius: 5px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.feed-types,
+.sort-options {
+  display: flex;
+  gap: 15px;
+}
+
+.feed-controls button {
+  padding: 6px 16px;
+  background: #2a2a2a;
+  color: #888;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 14px;
+}
+
+.feed-controls button:hover {
+  background: #333;
+  color: #e6e6e6;
+}
+
+.feed-controls button.active {
+  background: teal;
+  color: white;
+  transform: scale(1.2);
+  font-weight: 700;
+}
+
+/* Subreddit explorer */
+.subreddits {
+  position: fixed;
+  width: 17.5%;
+  height: 725px;
+  background: hsl(0, 0%, 10%);
+  margin: 100px auto auto -15%;
+  padding: 20px 10px 20px 0px;
+  border-radius: 10px;
+  text-align: center;
+  overflow-y: scroll; /* Makes box scrollable */
+  direction: rtl; /* Right to left */
+}
+
+/*This determines the dimensions of the the whole communities' scrollbar*/
+.subreddits::-webkit-scrollbar {
+    width: 10px;
+}
+
+/*This determines the properties of the the communities' scrollbar indicator*/
+.subreddits::-webkit-scrollbar-thumb {
+    background-color: teal;
+    border-radius: 10px;
+}
+
+/*This determines the properties of the scrollbar box*/
+.subreddits::-webkit-scrollbar-track {
+    background-color: transparent;
+    margin: 15px 0px;
+    border-radius: 10px;
+}
+
+.subreddits h2 {
+  color: hsl(0, 0%, 90%);
+  font-size: 16px;
+  margin-bottom: 10px;
+  direction: ltr;
+}
+
+.subreddits ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px;
+  gap: 10px;
+  padding: 20px 0px 0px 20px;
+  list-style: none;
+  direction: ltr;
+}
+
+.subreddits li {
+  border-bottom: none;
+  padding: 0;
+}
+
+.subreddits li:hover {
+  transform: scale(1.1);
+}
+
+.subreddits li:active {
+  transform: scale(1.2);
+}
+
+.subreddits a {
+  color: teal;
+  text-decoration: none;
+  padding: 5px 10px;
+  background: #2a2a2a;
+  border-radius: 15px;
+  font-size: 12px;
+  transition: all 0.2s;
+}
+
+.subreddits a:hover {
+  background: teal;
+  font-weight: bold;
+  color: white;
+  font-weight: 900px;
+  text-decoration: none;
+}
+
+.subreddits a:active {
+  background: cyan;
+  color: black;
+  font-weight: 900px;
+}
+
+/* Feed container */
+.feed {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 5px;
+}
+
+/* Post card */
+.post-card {
+  background: #1a1a1a;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 10px;
+  border: 3px solid hsl(0, 0%, 20%);
+  transition: all 0.2s;
+}
+
+.post-card:hover {
+  border-color: teal;
+}
+
+.post-card:active {
+  border-color: cyan;
+}
+
+.post-container {
+  background-color: black;
+  margin: 0px auto 0px auto;
+  padding: 15px 10px 15px 10px;
+  border-radius: 5px;
+}
+
+/* Subreddit link */
+.subreddit-link {
+  color: teal;
+  margin-bottom: 5px;
+}
+
+.subreddit-link a {
+  color: teal;
+  text-decoration: none;
+}
+
+.subreddit-link a:hover {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.subreddit-link a:active {
+  color: cyan;
+  text-decoration: none;
+}
+
+.nsfw-tag {
+  font-size: 11px;
+  margin-left: 10px;
+}
+
+/* Post title */
+.post-card h2 {
+  color: hsl(0, 0%, 90%);
+  margin: 5px 0;
+  font-size: 22px;
+}
+
+.post-card h2 a {
+  color: hsl(0, 0%, 90%);
+  text-decoration: none;
+}
+
+.post-card h2 a:hover {
+  color: teal;
+}
+
+.post-card h2 a:active {
+  color: cyan;
+}
+
+/* Post meta */
+.feedpost-meta {
+  color: hsl(0, 0%, 60%);
+  font-size: 14px;
+  margin: 5px 0 10px 0;
+}
+
+/* Media wrapper */
+.media-wrapper {
+  display: flex;
+  margin: 10px 0;
+  background: hsl(0, 0%, 5%);
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.media-image,
+.media-video {
+  max-width: 700px;
+  max-height: 700px;
+}
+
+.media-iframe {
+  width: 750px;
+  height: 425px;
+}
+
+.link-preview {
+  width: 100%;
+  color: teal;
+  text-align: left;
+}
+
+.link-preview:hover {
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.link-preview:active {
+  color: cyan;
+}
+
+.link-card {
+  padding: 20px;
+}
+
+/* Post preview text */
+.feedpost-text-preview {
+  color: hsl(0, 0%, 70%);
+  font-size: 14px;
+  line-height: 1.1;
+  margin: 10px 0;
+  padding: 10px;
+  background: hsl(0, 0%, 10%);
+  border-radius: 5px;
+  white-space: pre-wrap;
+}
+
+.disclaimer {
+  color: #666;
+  font-size: 12px;
+  text-align: center;
+  margin: 5px 0;
+}
+
+/* Buttons (voting and comments) */
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #2a2a2a;
+}
+
+.post-actions {
+  display: flex;
+  align-items: center;
+  margin: 0px;
+  padding: 0px;
+}
+
+.vote-section {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.score {
+  color: hsl(0, 0%, 90%);
+  font-weight: 700;
+  font-size: 30px;
+  text-align: center;
+}
+
+.vote-btn {
+  background: none;
+  border: none;
+  font-size: 50px;
+  color: hsl(0, 0%, 60%);
+  cursor: pointer;
+  padding: 0px;
+  transition: all 0.2s;
+}
+
+.vote-btn:hover {
+  color: hsl(0, 0%, 90%);
+  transform: scale(1.25);
+}
+
+.vote-btn:active {
+  transform: scale(1.5);
+}
+
+.vote-btn.DWN {
+  margin-left: -20px;
+  /*ONLY way I could fix a mysterious spacing*/
+}
+
+/*For showcase*/
+.vote-btn.UP:active {
+  color: green;
+}
+
+/*For full function*/
+/* .vote-btn.voted-up {
+    color: green;
+} */
+
+/*For showcase*/
+.vote-btn.DWN:active {
+  color: red;
+}
+
+/*For full function*/
+/* .vote-btn.DWN.voted-down {
+    color: red;
+} */
+
+.comments-link {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  color: hsl(0, 0%, 70%);
+  text-decoration: none;
+  transition: all 0.2s;
+  font-size: 20px;
+}
+
+.comments-link:hover {
+  color: teal;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.comments-link:active {
+  color: cyan;
+}
+
+/* Status messages */
+.status {
+  color: #e6e6e6;
+  text-align: center;
+  padding: 30px;
+}
+
+.status.loading-more {
+  color: #888;
+  font-size: 14px;
+  padding: 10px;
+}
+
+.status.error {
+  color: #ff4444;
+}
+
+.score {
+  margin-right: 20px;
+}
+
+@media only screen and (max-width: 1000px) {
+
+  .media-image,
+  .media-video {
+    max-width: 600px;
+    max-height: 600px;
+  }
+
+  .media-iframe {
+    width: 600px;
+    height: 400px;
+  }
+
+}
+
+@media only screen and (max-width: 800px) {
+
+  .media-image,
+  .media-video {
+    max-width: 600px;
+    max-height: 600px;
+  }
+
+  .media-iframe {
+    width: 600px;
+    height: 400px;
+  }
+
+}
