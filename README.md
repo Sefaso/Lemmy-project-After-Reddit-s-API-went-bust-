@@ -1,11 +1,11 @@
-# Reddit Clone (React + Redux Toolkit)
+# Lemmy Project (React + Redux Toolkit)
 
-A simplified Reddit-style feed built with **React**, **Redux Toolkit**, and the official Reddit API.  
+A simplified Reddit-style feed built with **React**, **Redux Toolkit**, and the Lemmy API.  
 This project demonstrates infinite scrolling, API integration, state management, and clean component architecture.
 
 ---
 
-## 🚀 Live Demo
+## Lemmy Live Demo
 **Coming soon — will be deployed on Netlify.**
 
 ---
@@ -13,7 +13,7 @@ This project demonstrates infinite scrolling, API integration, state management,
 ## 📸 Features
 
 - Infinite scrolling feed  
-- Fetches posts from Reddit’s public API  
+- Fetches posts from Lemmy’s public API  
 - Dedupe logic to avoid repeated posts  
 - Clean Redux Toolkit slice architecture  
 - Modular React components  
@@ -38,7 +38,7 @@ This project demonstrates infinite scrolling, API integration, state management,
 Clone the repo:
 
 ```bash
-git clone https://github.com/Sefaso/Reddit-Clone
+git clone https://github.com/Sefaso/Lemmy-project-After-Reddit-s-API-went-bust-.git
 ```
 Install dependencies:
 
