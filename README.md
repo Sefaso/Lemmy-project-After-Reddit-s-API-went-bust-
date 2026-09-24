@@ -10,7 +10,7 @@ This project demonstrates infinite scrolling, API integration, state management,
 
 ---
 
-## 📸 Features
+## Features
 
 - Infinite scrolling feed  
 - Fetches posts from Lemmy’s public API  
@@ -22,7 +22,7 @@ This project demonstrates infinite scrolling, API integration, state management,
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **React (create-react-app)**
 - **Redux Toolkit**
@@ -33,7 +33,7 @@ This project demonstrates infinite scrolling, API integration, state management,
 
 ---
 
-## 📦 Installation
+## Installation
 
 Clone the repo:
 
